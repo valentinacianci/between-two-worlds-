@@ -1,0 +1,282 @@
+/* GENERAL STYLE */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F4F0E8;
+    color: #292720;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+em {
+    color: #A44F3B;
+    font-weight: normal;
+}
+
+
+/* HEADER / NAVIGATION */
+
+header {
+    padding: 16px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D9D0C2;
+}
+
+/* PERSONAL LOGO */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: 68px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover img {
+    opacity: 0.75;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #A44F3B;
+}
+
+
+/* HOMEPAGE INTRO */
+
+.hero {
+    padding: 85px 8% 60px;
+}
+
+.eyebrow,
+.section-label {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.eyebrow {
+    margin-bottom: 28px;
+}
+
+h1 {
+    font-size: clamp(60px, 10vw, 130px);
+    line-height: 0.98;
+    letter-spacing: -4px;
+    margin: 0;
+}
+
+.hero-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 40px;
+}
+
+.tagline {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    line-height: 1.5;
+    font-style: italic;
+    margin: 0;
+}
+
+.introduction {
+    max-width: 470px;
+    margin: 0;
+    line-height: 1.9;
+    color: #625D53;
+}
+
+
+/* FEATURE IMAGE */
+
+.feature-image {
+    width: 85%;
+    max-width: 1000px;
+    height: 450px;
+    margin: 50px auto 100px;
+    background-color: #DCCDBB;
+    overflow: hidden;
+}
+
+.feature-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* MAIN CONTENT SECTIONS */
+
+section:not(.hero) {
+    padding: 0 8%;
+    margin-bottom: 120px;
+    scroll-margin-top: 35px;
+}
+
+.section-label {
+    color: #A44F3B;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin: 0 0 30px;
+}
+
+.section-copy {
+    max-width: 600px;
+    color: #625D53;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.section-copy p {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #D9D0C2;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 700px) {
+
+    header {
+        align-items: center;
+        flex-direction: column;
+        gap: 16px;
+        padding: 18px 5%;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    .hero {
+        padding: 65px 6% 45px;
+    }
+
+    h1 {
+        font-size: clamp(48px, 11vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    .hero-bottom {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tagline {
+        font-size: 21px;
+    }
+
+    .feature-image {
+        width: 88%;
+        height: 280px;
+        margin: 0 auto 80px;
+    }
+
+    section:not(.hero) {
+        padding: 0 6%;
+        margin-bottom: 85px;
+    }
+
+    h2 {
+        font-size: 46px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 380px) {
+
+    nav {
+        gap: 10px 13px;
+    }
+
+    nav a {
+        font-size: 8px;
+    }
+
+    h1 {
+        font-size: 46px;
+    }
+
+}
